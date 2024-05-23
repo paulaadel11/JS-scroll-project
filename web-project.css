@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background:linear-gradient(#0b0222,#150446);
+    height: 100vh;
+    font-family: system-ui;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;      /* lma bla2y en 3ndy parent 3ayez awady wlado fi 7ta mo3iana basta3ml "flex-Box" */
+    justify-content: space-between;     /* bygeeb wa7ed ymeen w wa7rd 4emal*/
+    align-items: center;            /* betnazel le t7t 4wya */
+    margin: 20px;
+    position: absolute;      /**/
+    width: 95%;
+    z-index: 10;
+}
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;      /* 34an bardo dah el ab el hwady wlado fe mkan mo3ian*/
+    justify-content: center;
+    align-items:center;
+    list-style: none;
+}
+header ul li{
+    margin-right: 30px;
+}
+header ul li a{
+    padding:  6px 15px;     /* 34an lma a3ml hover yeb2a el 4akl kwais*/
+    border-radius: 20px;
+}
+header ul li a:hover{
+    background-color: antiquewhite;
+    color: #4f2577;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center; /* 34an t5aliha fel nos mn el x-axis*/
+    align-items: center;     /* 34an t5aliha fel nos mn el y-axis*/
+}
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;  /*byzbot 4akl el denia*/
+}
+#moon
+{
+    mix-blend-mode: screen;     /* 34an yzbt soret el amar zy el photoshop */
+    transform: translateY(80px);
+}
+.nouvil{
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-120px);
+}
+/* dlwa2ty 3aizen ngeeb nouvil dih fe nos el saf7a bel flex
+   fa han4oof aboha feen el hoa el main (look from line 44) */ 
+.content{
+    color: white;
+    padding: 30px;
+    background: linear-gradient(to top,#11011f,transparent);
+}
+.content h2{
+    margin: 20px;
+    font-size: 30px;
+}
+.content p{
+    margin: 20px;
+}
+.main::after{
+    content: '';
+    position: absolute; /* 34an at7akem fe mkano */
+    bottom: 0; /*mn el ab "main" */
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top,#11011f,transparent);    /* 34an admeg el lon bta3y m3 fara8 w "to top" 34an mn t7t le fo2" */
+}
